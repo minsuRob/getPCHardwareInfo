@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "get-teachers-pc-infomation",
+  "private_key_id": "55508d1aa28f276cba55d7c819a72e17166d92b1",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvAIBADANBgkqhkiG9w0BAQEFAASCBKYwggSiAgEAAoIBAQDl6PCRfPk6LkZj\nf5buCX3ZxlAFp6HFayqvjdgyr3w2AIIe71bHWMwiQGesELLA8yfp/ldM7igxGyrl\njxhTEOSkyEUxCyDrjBJL4tODKQu5QjCZP+f1SdK3zWGA4dIuvd0yKd9R4xhjiVIV\nbfuO+cKXu1njKlBEkNo+rZX3wQQQoPz/mB0gANYsR5mSzQbbe9ChC5HLKMuSJh9+\nv5GSMMXCXRM8AVfnWJjBjP8VMHzW3rUBvJlNiQDW9+QeAobhnrybX5ayeXoPDtlI\nS3y8WW+9sHpellRm5EzS2/smMxl5jBH7Jnk83nLlk0Irjg1djLKPNuun7YJgtQLE\n+Gw23EE/AgMBAAECggEADfTZ0bDZGR1qKXUWszc4JTNjBlX/GRKp2OgzWa/BAVOj\nkn+ZXg2S+HkHaPDG1/6vVKs/+nCgDrA3lFiWDxH3q9TV45N7uXekqh7IOFwAAtV9\n25xIcqrNgaMCASs9VgXD1l06NVZIeF+DlL9NXKzCSIPXgdWshd4qEFFEkjqRQT8M\n1UhC2TepEgj3ayTu+MhBkurMcvp2DE1othRFM20CCsTix4tpEBvpv1EARDzekdcA\nhhWWQd/GL+TKmK5N6Nvr7n4FCCBsuyW4AGbF195F4x9qQXpcq+iDD+nYzrjbDv6J\nEw+uTh4FjBF6Bm821U9PWXpG401lDTMHcrJxelqYLQKBgQD5jkve2tLT8lhw7+NB\nI5baKkpJVYmKCdxYfSaCcF33QB/Vm6WsMLos0kJrwT4saEztRVouwyx9Olfe066L\n0R3MqXnS8dI6tI3GURYKb47Fr7Zxv/qtV5g19kIh/i5BVnTff3rSfxn11cIxlheX\nMXQIMf8lxA1txdLxWRO4SXrFtQKBgQDr2MXWzeoWzPCYhFWW5CMxLM8MYb6JZG9r\nkEu1WDiTS5ImTNE94jF676JDTzQfYWtfhebo+S0UuqdxvxI6vYFg0l2OccicqbX4\n9OghVOo/VKckhXj0ZxRNJOpwd3NpxEIi0Av0+7a6/Iwlf4S2F2dfFfnvEo0I5+4j\nPGb4E2pDowKBgH4V/w9h0BN15mlpSpCmwpkHtPDIXu13ffTXhpVw4IkDxRHPyizt\nkaMDuLtor1kQeY2H9MCbq+a5i5vxp8bMqRm2pu6Fb4ppnxgL7+7l3mTTGoLuVGEw\nWJ8rBM7X9dbdL7+cURn5Tcx/a9ZR1yl0uwNI/3i9TWug/6shLm118qnhAoGAG/Y1\nboQ3TsC5fbui0iL2MSxY1+T2zB9GPoB7GWL+QihhiXzuCeI5b5PdrxFC4r2QF2Eu\nwUxZle2TUJ8QsDorjqkiQnMnD7vnQT74DoucwiltL51Le96Ev6iyyua+njmQhcQY\nxtDZF04952w49cXMka9vVHLkmbu1tiPBKYRTwvUCgYBY+0zY/iAxrYrR7HBQJ8Oc\nK1JY2fyD60FX/oylnywkx39PIsGZFHSX/lM7BnatVsJIbpiHYAb3LhBkbPBK9OY6\n4neUcOmugcw2u2F5mnQlfpUf/LFIYZTg6/aqIWXmF5HFV4Cp3QsbMI3hnB9ahVWu\n5hxiVcaCB5xnbIauALv1uw==\n-----END PRIVATE KEY-----\n",
+  "client_email": "robertleegsheets@get-teachers-pc-infomation.iam.gserviceaccount.com",
+  "client_id": "107012673527884039016",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/robertleegsheets%40get-teachers-pc-infomation.iam.gserviceaccount.com"
+}
