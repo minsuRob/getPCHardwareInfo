@@ -3,14 +3,6 @@ SETLOCAL
 
 for /f "delims=[] tokens=2" %%a in ('ping -4 -n 1 %ComputerName% ^| findstr [') do set NetworkIP=%%a
 
-for /f "skip=1 tokens=1-6 delims=," %%A in ('wmic computersystem get Manufacturer^,Model^,TotalPhysicalMemory^,SystemType^,Workgroup /format:csv ^| findstr ","') do (
-    set "HostName=%%A"
-    set "Manufacturer=%%B"
-    set "SystemModel=%%C"
-    set "SystemType=%%D"
-    set "TotalPhysicalMemory=%%E"
-)
-
 for /f "skip=1 tokens=1-5 delims=," %%A in ('wmic computersystem get Manufacturer^,Model^,TotalPhysicalMemory^,SystemType^,Workgroup /format:csv ^| findstr ","') do (
     set "HostName=%%A"
     set "Manufacturer=%%B"
@@ -22,9 +14,23 @@ rem pcSys
 echo %NetworkIP%
 ECHO %HostName%
 ECHO %Manufacturer%
-ECHO wmic csproduct get version
+for /f "skip=1 tokens=1-2 delims=," %%A in ('wmic csproduct get version^ /format:csv ^| findstr ","') do (
+    set "PCName=%%B"
+)
+ECHO %PCName%
 ECHO %SystemModel%
-ECHO wmic bios get ReleaseDate
+
+
+for /f "skip=1 tokens=1-2 delims=," %%A in ('wmic bios get ReleaseDate^ /format:csv ^| findstr ","') do (
+    set "ReleaseDate=%%B"
+)
+ECHO %ReleaseDate%
+
+for /f "skip=1 tokens=1-2 delims=," %%A in ('wmic DISKDRIVE get SerialNumber^ /format:csv ^| findstr ","') do (
+    set "SerialNumber=%%B"
+)
+ECHO %SerialNumber%
+
 
 rem CPU - Maybe window bug? so that sequnce was change. 
 for /f "skip=1 tokens=1-5 delims=," %%A in ('wmic cpu get name^, numberofcores^, NumberOfLogicalProcessors^, maxclockspeed^ /format:csv ^| findstr ","') do (
@@ -42,22 +48,28 @@ ECHO %maxclockspeed%
 
 rem RAM
 for /f "skip=1 tokens=1-2 delims=," %%A in ('wmic MEMORYCHIP get banklabel^ /format:csv ^| findstr ","') do (
-    set "Caption=%%A"
     set "banklabel=%%B"
 )
-
+rem % 1,073,741,824‬
+echo %TotalPhysicalMemory%
 ECHO %banklabel%
 
 for /f "skip=1 tokens=1-2 delims=," %%A in ('wmic memphysical get MemoryDevices^ /format:csv ^| findstr ","') do (
-    set "Caption=%%A"
     set "MemoryDevices=%%B"
 )
 
 ECHO %MemoryDevices%
 
+for /f "skip=1 tokens=1-3 delims=," %%A in ('wmic diskdrive get model^, size^ /format:csv ^| findstr ","') do (
+    set "driveModel=%%B"
+    set "diskSize=%%C"
+)
+
+ECHO %diskSize%
+ECHO %driveModel%
+
 rem os
 for /f "skip=1 tokens=1-4 delims=," %%A in ('wmic os get Caption^, version^, OSArchitecture^ /format:csv ^| findstr ","') do (
-    set "Caption=%%A"
     set "Caption=%%B"
     set "OSArchitecture=%%C"
     set "OSVersion=%%D"
@@ -66,7 +78,6 @@ for /f "skip=1 tokens=1-4 delims=," %%A in ('wmic os get Caption^, version^, OSA
 ECHO %Caption%
 ECHO %OSVersion%
 ECHO %OSArchitecture%
-
-
-
+SET dst=%NetworkIP%, %HostName%, %Manufacturer%, %PCName%, %SystemModel%, %ReleaseDate%, %SerialNumber%, %cpuName%, %numberofcores%, %NumberOfLogicalProcessors%, %maxclockspeed%, %TotalPhysicalMemory%, %banklabel%, %MemoryDevices%, %diskSize%, %driveModel%, %Caption%, %OSVersion%, %OSArchitecture%
+echo %dst% | clip
 GOTO :eof
