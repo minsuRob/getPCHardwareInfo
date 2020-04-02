@@ -13,11 +13,11 @@ def writeCell(name):
     # 스프레스시트 문서 가져오기
     doc = gc.open_by_url(spreadsheet_url)
     # 시트 선택하기
-    worksheet = doc.worksheet('Sheet1')
+    worksheet = doc.worksheet('Write')
     cell = worksheet.find(name)
     print("Found something at R%sC%s" % (cell.row, cell.col))
 
-    worksheet.update_acell('B' + str(cell.row), name + '예쁜데~')
+    worksheet.update_acell('B' + str(cell.row), '예쁜데~')
 
 
 def readCell():
