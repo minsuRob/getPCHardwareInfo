@@ -1,15 +1,43 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <style>
+  .thumb {
+    height: 75px;
+    border: 1px solid #000;
+    margin: 10px 5px 0 0;
+  }
+</style>
+
+
 </head>
-<body>
+
+<body onload="PasteFunction()">
 Welcome Django Project!!
-    <form action="" method="post">
-        {{ form.as_p }}
-        {% csrf_token %}
-        <button type="submit" class="btn btn-primary">Save</button>
-    </form>
+<form action="" method="post">
+    {{ form.as_p }}
+    {% csrf_token %}
+    <button type="submit" class="btn btn-primary">Save</button>
+</form>
+{% comment %}
+<button onclick="openTextFile()">Open</button>
+{% endcomment %}
+<div id="myDiv">z</div>
+
+
 </body>
+<script>
+
+function PasteFunction() {
+//  const text = await navigator.clipboard.readText();
+  //document.getElementById("myDiv").innerText = text;
+    var clip = window.clipboardData.getData('Text');
+  document.getElementById("myDiv").innerText = clip;
+
+
+}
+
+</script>
 </html>
