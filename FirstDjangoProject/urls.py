@@ -21,6 +21,7 @@ from web.views import *
 urlpatterns = [
     url('admin/', admin.site.urls),
     url('write/', write, name='write'),
+    url('index/', index, name='index'),
     url('list/', list, name='list'),
     #path('view/(?P<num>[0-9]+)/$', view),
     url('view/(?P<num>[0-9]+)/$', view),
